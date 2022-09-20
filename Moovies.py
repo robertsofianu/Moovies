@@ -32,7 +32,8 @@ def ListToString(s):
     return (str1.join(s))
 
 
-names_Links = [] # The list of all names and links
+# The list of all names and links
+names_Links = []
 
 
 email_body_str = ListToString(names_Links)
