@@ -65,9 +65,9 @@ https://www.1377x.to/{linksList[41]}
 
 email_body_str = ListToString(names_Links)
 
-email_sender = 'listofmovie.robert@gmail.com'
-email_password = 'dgrktisgcgzcuynq'
-email_receiver = 'robertsofianu@gmail.com'
+email_sender = 'email sender'
+email_password = '16 digit password'
+email_receiver = 'email receiver'
 subject = 'Movies and Links'
 body = f"""
 {email_body_str}
