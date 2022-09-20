@@ -7,7 +7,6 @@ import ssl
 import smtplib
 
 
-
 # Read the CSV file
 data = pd.read_csv('https://www.imdb.com/list/ls565814860/export')
 data_title = data['Title'].tolist() # Creates a list from the Const column of the CSV
@@ -31,6 +30,7 @@ for names in new_names:
 def ListToString(s):
     str1 = ' '
     return (str1.join(s))
+
 
 names_Links = [] # The list of all names and links
 
@@ -61,8 +61,6 @@ https://www.1377x.to/{linksList[41]}
     names_Links.append(messages)
 
     
-
-
 email_body_str = ListToString(names_Links)
 
 email_sender = 'email sender'
@@ -79,10 +77,7 @@ em['To'] = email_receiver
 em['Subject'] = subject
 em.set_content(body)
 
-
-
 context = ssl.create_default_context()
-
 
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
     smtp.login(email_sender, email_password)
